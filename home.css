@@ -1,0 +1,384 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family:system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
+}
+
+.portfolio{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:2rem;
+    width:100%;
+}
+
+.navbar{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding:1.4rem;
+}
+
+.navbar .logo a{
+    text-decoration: none;
+    font-size:2rem;
+    font-weight:900;
+    color:#0d6efd;
+}
+
+.navbar nav a{
+    margin-left:1.3rem;
+    text-decoration: none;
+    font-size:1.3rem;
+    color:black;
+}
+
+.navbar nav a:hover{
+    color:#0d6efd;
+}
+
+.navbar.expanded {
+    height: 50vh; /* Full height */
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar.expanded nav {
+    display: flex; /* Show nav links */
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar.expanded nav a {
+    display: block;
+    margin-top: 2rem;
+}
+
+#close {
+    display: none; /* Initially hidden */
+}
+
+/* Show the close icon in the expanded state */
+.navbar.expanded #close {
+    display: block;
+    position: absolute;
+    top: 1.8rem;
+    right: 1rem;
+}
+
+#menu , #close{
+    display:none;
+}
+
+@media (max-width:450px){
+    .navbar nav a{
+        display:none;
+    }
+
+    #menu , #close{
+        width:10%;
+    }
+
+    #menu{
+        display:block;
+    }
+
+    #menu img , #close img{
+        width:10%;
+    }
+}
+
+#about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    margin-top:2rem;
+    width:100%;
+}
+
+#about .image-section{
+    width:45%;
+}
+#about .image-section img{
+    width:60%;
+    text-align: center;
+    position: relative;
+    left:3rem;
+    bottom:3rem;
+}
+#about .text-section{
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    gap:1.2rem;
+    flex-direction: column;
+    width:40%;
+}
+.text-section h1{
+    font-weight:900;
+    font-size:4rem;
+}
+
+.text-section h2{
+    font-weight:700;
+    font-size:2rem;
+}
+.text-section p{
+    font-weight:500;
+    font-size:1.3rem;
+}
+#education , #projects , #skills , #achievements ,#contact, .contact-form , footer{
+    display:flex;
+    justify-content: left;
+    align-items: left;
+    flex-direction: column;
+    gap:1.4rem;
+    padding-left:5rem;
+    width:100%;
+}
+
+#education h1{
+    font-weight:900;
+    font-size:3rem;
+}
+
+.qualification{
+    display:flex;
+    justify-content: left;
+    align-items: left;
+    flex-direction: column;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin-right:1rem;
+    background-color: #0d6efd;
+    color:white;
+    border-radius:10px;
+}
+
+.degree , .institue{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:1rem 1rem 0.5rem 1rem;
+}
+
+.degree h2 , .institue h2{
+    font-size:1.5rem;
+}
+
+#projects{
+    margin-top:3.5rem;
+}
+
+#projects h1{
+    font-weight:900;
+    font-size:3rem;
+}
+
+.project-cards{
+    display:flex;
+    justify-content: left;
+    align-items: left;
+    gap:3.5rem;
+}
+
+.card img{
+    height:200px;
+}
+
+.card-title{
+    font-weight:700;
+    font-size:1.5rem;
+}
+
+#skills , #achievements , .contact-form{
+    margin-top:2rem;
+}
+
+#skills h1{
+    font-weight:900;
+    font-size:3rem;
+}
+
+#achievements h1{
+    font-weight:900;
+    font-size:3rem;
+}
+
+.contact-form h1{
+    font-weight:900;
+    font-size:3rem;
+}
+
+.skill-section{
+    box-shadow: rgba(0, 0, 0, 0.15) 0 1.95px 0;
+    padding-bottom: 1rem;
+}
+
+#contact{
+    width:100%;
+    padding:0;
+}
+
+.contact-form{
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    flex-direction: column;
+    gap:1.4rem;
+    width:100%;
+    margin-top:2rem;
+}
+
+.message{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+}
+
+.message img{
+    width:35%;
+    height:480px;
+}
+
+.message form{
+    display:flex;
+    justify-content: left;
+    align-items: left;
+    flex-direction: column;
+    gap:1.5rem;
+    width:45%;
+    margin-right:3rem;
+}
+
+.message form input{
+    width:100%;
+    padding:1rem;
+    border:1px solid black;
+    outline:none;
+    border-radius:5px;
+    font-size:1.2rem;
+}
+
+.message form button{
+    padding:1rem 0;
+}
+
+.styled-input {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.styled-input::placeholder {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    transform: translateY(-50%);
+}
+
+footer{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top:2rem;
+    background-color: #0d6efd;
+    color:white;
+    padding:1.5rem 0;
+}
+
+footer a{
+    color:white;
+    text-decoration: none;
+}
+
+.social-media{
+    width:17%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.social-media a{
+    width:50%;
+    text-align: center;
+}
+
+.social-media a img{
+    text-align: center;
+    width:50%;
+    height:3rem;
+}
+
+#menu , #close{
+    display:none;
+}
+
+#menu img , #close img{
+    width:10%;
+}
+
+@media (max-width:450px){
+    body{
+        width:100%;
+    }
+    #about{
+        flex-direction: column-reverse;
+        width:100%;
+    }
+
+    .text-section , .image-section{
+        width:100%;
+    }
+
+    .image-section img{
+        display:none;
+        width:100%;
+    }
+
+    .text-section h1{
+        width:100%;
+    }
+
+    .project-cards{
+        flex-direction: column;
+        gap:2rem;
+        width:100%;
+    }
+
+    .card{
+        width:100%;
+    }
+
+    .btns{
+        width:100%;
+    }
+
+    .message{
+        flex-direction: column;
+    }
+
+    .message img{
+        width:100%;
+    }
+
+    .message form{
+        width:100%;
+    }
+
+    footer{
+        width:100%;
+    }
+}
